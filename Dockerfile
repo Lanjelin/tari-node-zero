@@ -4,7 +4,7 @@ ARG BUILD_TAG=4.9.0
 FROM debian:bookworm-slim AS builder
 
 ARG BUILD_TAG
-ARG tari_url="https://github.com/tari-project/tari/releases/download/v$BUILD_TAG/"
+ARG tari_url="https://github.com/tari-project/tari/releases/download/$BUILD_TAG/"
 
 RUN apt update && apt-get install -y \
       unzip wget ca-certificates binutils && \
